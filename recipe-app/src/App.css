@@ -140,3 +140,12 @@ img{
   width: 350px;
   height: 350px;
 }
+
+#recipe{
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  height: 50%;
+}
