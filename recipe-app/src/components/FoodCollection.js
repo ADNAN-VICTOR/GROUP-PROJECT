@@ -37,7 +37,7 @@ function FoodCollection() {
                   </div>
         ))
       ) : (
-                  <div className="bg bg-secondary-subtle m-3">
+                  <div id="recipe" className="bg bg-secondary-subtle m-3">
                     <img src={selectedFood.food_pic} alt="food img placeholder" />
                     <h2>{selectedFood.name}</h2>
                     <p>Calories: {selectedFood.calories}</p>
