@@ -1,8 +1,8 @@
 import React from "react";
 export function Form(){
     return(
-        <>
-        <form>
+        <div className="">
+        <form id="form">
         <button name="All" >Delicacies</button>
         <input type="checkbox" name="vegeterian" id="vegeterian"/>
         <label for="vegeterian">Vegeterian</label>
@@ -17,6 +17,6 @@ export function Form(){
         <input type="checkbox" name="chicken" id="chicken"/>
         <label for="chicken">Chicken</label>
         </form>
-        </>
+        </div>
     )
 }
