@@ -48,7 +48,7 @@ h1 {
   text-align: center;
 }
 
-form {
+#form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

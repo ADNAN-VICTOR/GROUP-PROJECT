@@ -7,19 +7,12 @@ function SearchBar() {
         <div>
             <header>
                 <form className="search-form">
-                    <div>
-                        <h2 className="recipeDiv">Recipe App</h2>
-                    </div>
-                    <div className="div-input"> 
+                    <div className="div-input p-4"> 
                         <input 
                             className="search-input"
                             type="search"
                             placeholder="Search"
                         />
-                        
-                            
-                        
-                        
                     </div>
                 </form> 
             </header>
