@@ -11,10 +11,6 @@ Savory Delights offers a diverse selection of mouth-watering dishes from various
 - **Extensive Menu:** Explore our extensive menu featuring a wide range of delicacies, including vegetarian, seafood, pork, beef, lamb, and chicken dishes.
 - **Categories:** Browse dishes by category, such as Vegetarian, Seafood, Pork, Beef, Lamb, and Chicken, to quickly find what you're craving.
 - **Recipes:** Discover detailed recipes for each dish, complete with ingredients, cooking instructions, and serving suggestions.
-- **Favorites:** Save your favorite dishes to your profile for easy access and quick ordering.
-- **Reviews:** Read reviews from other food enthusiasts to help you decide what to try next.
-- **Customization:** Customize your dishes by selecting preferred ingredients, spice levels, and cooking styles.
-- **Ordering:** Place orders directly through our website for pickup or delivery, or make reservations for dine-in options.
 
 ## Getting Started
 
@@ -32,7 +28,7 @@ Savory Delights is built using the following technologies:
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Node.js, Express.js
-- **Database:** 
+- **Database:** https://json-recipe.onrender.com/food
 - **Framework:** React.js
 - **Additional Libraries:** React Router
 
