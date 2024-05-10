@@ -71,24 +71,22 @@ export function Form({ foods }) {
             {filtered.map((m) => {
                 if (view === m) {
                     return (
-                        <div key={m.id} className="d-flex flex-row flex-wrap justify-content-center bg bg-info-subtle">
-                            <div className="bg bg-secondary-subtle m-3" >
-                                <img src={m.food_pic} alt="food img placeholder" />
+                        <div  key={m.id} className="d-flex flex-row flex-wrap justify-content-center bg bg-info-subtle">
+                            <div id="recipe" className="bg bg-secondary-subtle m-3" >
+                                <img src={m.food_pic} alt={m.food_pic} />
                                 <h2>{m.name}</h2>
                                 <p>Calories: {m.calories}</p>
                                 <p>Food Type: {m.food_type}</p>
                                 <button className="btn btn-info" onClick={() => viewed(null)}>Close Recipe</button><br></br>
-                                <div style={{ marginLeft: '10px' }}>
-                                    <h3>{m.recipe}</h3>
-                                </div>
+                                <h3>{m.recipe}</h3>
                             </div>
                         </div>
                     );
                 } else {
                     return (
                         <div key={m.id} className="d-flex flex-row flex-wrap justify-content-center bg bg-info-subtle">
-                            <div className="bg bg-secondary-subtle m-3" >
-                                <img src={m.food_pic} alt="food img placeholder" />
+                            <div id="recipe" className="bg bg-secondary-subtle m-3" >
+                                <img src={m.food_pic} alt={m.food_pic}/>
                                 <h2>{m.name}</h2>
                                 <p>Calories: {m.calories}</p>
                                 <p>Food Type: {m.food_type}</p>

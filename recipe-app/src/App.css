@@ -61,7 +61,7 @@ input[type="text"] {
   border-radius: 8px;
   font-size: 16px;
   padding: 12px;
-  width: 300px;
+  width: 60%;
 }
 .btn {
   cursor: pointer;
@@ -146,6 +146,10 @@ img{
   align-content: center;
   justify-content: center;
   text-align: center;
-  width: 50%;
+  width: 24%;
   height: 50%;
+}
+
+div{
+  font-family: 'Times New Roman', Times, serif;
 }

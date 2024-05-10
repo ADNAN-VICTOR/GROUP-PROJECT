@@ -31,7 +31,7 @@ export function FoodCollection({ foods, category }) {
           ))
         ) : (
           <div id="recipe" className="bg bg-secondary-subtle m-3">
-            <img src={selectedFood.food_pic} alt={selectedFood.name} />
+            <img src={selectedFood.food_pic} alt={setSelectedFood.name} />
             <h2>{selectedFood.name}</h2>
             <p>Calories: {selectedFood.calories}</p>
             <p>Food Type: {selectedFood.food_type}</p>
