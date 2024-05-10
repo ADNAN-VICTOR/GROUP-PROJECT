@@ -16,56 +16,62 @@ export function Form({ foods }) {
 
     return (
         <>
-            <div className="">
+            <div >
                 <form id="form" onSubmit={(e) => e.preventDefault()}>
                     <input
+                        className="btn-check"
                         type="checkbox"
                         name="vegeterian"
                         onChange={() => change('vegetarian')}
                         checked={category === 'vegetarian'}
                         id="vegeterian"
                     />
-                    <label htmlFor="vegeterian">Vegetarian</label>
+                    <label className="btn btn-outline-primary" htmlFor="vegeterian">Vegetarian</label>
                     <input
+                        className="btn-check"
                         type="checkbox"
                         name="seafood"
                         onChange={() => change('seafood')}
                         checked={category === 'seafood'}
                         id="seafood"
                     />
-                    <label htmlFor="seafood">Seafood</label>
+                    <label className="btn btn-outline-primary" htmlFor="seafood">Seafood</label>
                     <input
                         type="checkbox"
                         name="pork"
                         onChange={() => change('pork')}
                         checked={category === 'pork'}
                         id="pork"
+                        className="btn-check"
                     />
-                    <label htmlFor="pork">Pork</label>
+                    <label className="btn btn-outline-primary" htmlFor="pork">Pork</label>
                     <input
                         type="checkbox"
                         name="beef"
                         onChange={() => change('beef')}
                         checked={category === 'beef'}
                         id="beef"
+                        className="btn-check"
                     />
-                    <label htmlFor="beef">Beef</label>
+                    <label className="btn btn-outline-primary" htmlFor="beef">Beef</label>
                     <input
                         type="checkbox"
                         name="lamb"
                         onChange={() => change('lamb')}
                         checked={category === 'lamb'}
                         id="lamb"
+                        className="btn-check"
                     />
-                    <label htmlFor="lamb">Lamb</label>
+                    <label className="btn btn-outline-primary" htmlFor="lamb">Lamb</label>
                     <input
                         type="checkbox"
                         name="chicken"
                         onChange={() => change('chicken')}
                         checked={category === 'chicken'}
                         id="chicken"
+                        className="btn-check"
                     />
-                    <label htmlFor="chicken">Chicken</label>
+                    <label className="btn btn-outline-primary" htmlFor="chicken">Chicken</label>
                 </form>
             </div>
             {filtered.map((m) => {

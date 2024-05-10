@@ -1,8 +1,9 @@
 import './App.css';
 import {FoodCollection} from './components/FoodCollection';
-import SearchBar from './components/SearchBar';
 import { Form } from './components/Navbar';
 import React,{useState,useEffect} from 'react';
+
+
 function App() {
   const [foods, setFoods] = useState([])
   useEffect(() => { 
@@ -15,8 +16,7 @@ function App() {
 
   return (
     <div>
-      
-      <SearchBar />
+      <h1>Savory Delights</h1>
       <Form foods={foods}/>
       <FoodCollection foods={foods}/>
     </div>
