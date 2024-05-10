@@ -1,18 +1,11 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
 
-function FoodCollection() {
+export function FoodCollection({foods}) {
   
-  const [foods, setFoods] = useState([])
   const [selectedFood, setSelectedFood] = useState(null);
 
-  useEffect(() => { 
-    fetch("https://json-recipe.onrender.com/food")
-    .then(res => res.json())
-    .then(data => {setFoods(data); console.log(data)})
-    .catch(error => console.error("Error fetching Data!!!", error))
-    
-  }, [])
+ 
+  
 
   const handleViewRecipe = (food) => {
     setSelectedFood(food);
@@ -52,4 +45,3 @@ function FoodCollection() {
     );
   }
   
-  export default FoodCollection;
