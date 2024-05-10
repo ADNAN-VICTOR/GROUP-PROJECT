@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 
-export function FoodCollection({foods}) {
-  
+export function FoodCollection({ foods, category }) {
   const [selectedFood, setSelectedFood] = useState(null);
-
- 
-  
 
   const handleViewRecipe = (food) => {
     setSelectedFood(food);
@@ -15,33 +11,36 @@ export function FoodCollection({foods}) {
     setSelectedFood(null);
   };
 
+  const filteredFoods = category
+    ? foods.filter((food) => food.food_type === category)
+    : foods;
+
   return (
-      <div>
-        <h1>Food Collection</h1>
-        <div id="FoodContainer" className="d-flex flex-row flex-wrap justify-content-center bg bg-info-subtle"> 
-           {!selectedFood ? (
-              foods.map(food => (
-                 <div key={food.id} className="bg bg-secondary-subtle m-3">
-                    <img src={food.food_pic} alt="food img placeholder" />
-                    <h2>{food.name}</h2>
-                    <p>Calories: {food.calories}</p>
-                    <p>Food Type: {food.food_type}</p>
-                    <button className="btn btn-info" onClick={() => handleViewRecipe(food)}>View Recipe</button>
-                  </div>
-        ))
-      ) : (
-                  <div id="recipe" className="bg bg-secondary-subtle m-3">
-                    <img src={selectedFood.food_pic} alt="food img placeholder" />
-                    <h2>{selectedFood.name}</h2>
-                    <p>Calories: {selectedFood.calories}</p>
-                    <p>Food Type: {selectedFood.food_type}</p>
-                    <h3>Recipe:</h3>
-                    <p>{selectedFood.recipe}</p>
-                    <button className="btn btn-info" onClick={handleGoBack}>Go Back</button>
-                  </div>
-      )}
-        </div>
+    <div>
+      <h1>Food Collection</h1>
+      <div id="FoodContainer" className="d-flex flex-row flex-wrap justify-content-center bg bg-info-subtle">
+        {!selectedFood ? (
+          filteredFoods.map((food) => (
+            <div key={food.id} className="bg bg-secondary-subtle m-3">
+              <img src={food.food_pic} alt={food.name} />
+              <h2>{food.name}</h2>
+              <p>Calories: {food.calories}</p>
+              <p>Food Type: {food.food_type}</p>
+              <button className="btn btn-info" onClick={() => handleViewRecipe(food)}>View Recipe</button>
+            </div>
+          ))
+        ) : (
+          <div id="recipe" className="bg bg-secondary-subtle m-3">
+            <img src={selectedFood.food_pic} alt={selectedFood.name} />
+            <h2>{selectedFood.name}</h2>
+            <p>Calories: {selectedFood.calories}</p>
+            <p>Food Type: {selectedFood.food_type}</p>
+            <h3>Recipe:</h3>
+            <p>{selectedFood.recipe}</p>
+            <button className="btn btn-info" onClick={handleGoBack}>Go Back</button>
+          </div>
+        )}
       </div>
-    );
-  }
-  
+    </div>
+  );
+}
